@@ -6,20 +6,12 @@ HEADER and FOOTER styles-
 @header-utility-height: 64px;
 
 /*
-  Lock the Header to our page content's breakpoints,
-  instead of using the fluid container
-*/
-.container {
-  padding: 0;
-}
-
-/*
   The header and footer don't have this special border-bottom underline,
   catching all cases here
 */
 #header a,
 .utility-section a {
-  .link-decorator(transparent, transparent);
+  border-bottom: 0;
 }
 
 /* TODO(kalvin) refactor to use LESS more, lots of old css here */
