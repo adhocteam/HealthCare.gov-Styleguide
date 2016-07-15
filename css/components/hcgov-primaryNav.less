@@ -1,0 +1,66 @@
+.hcgov-primaryNav {
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 0;
+    font-weight: @font-sans-bold;
+    line-height: @line-height;
+    list-style: none;
+
+    @media (min-width: @screen-md-min) {
+
+    }
+}
+
+.hcgov-primaryNav_item {
+    display: block;
+    font-size: @font-size-hecto;
+    @media (min-width: @screen-md-min) {
+        display: inline-block;
+    }
+}
+
+.hcgov-primaryNav_item + .hcgov-primaryNav_item {
+    @media (min-width: @screen-md-min) {
+        padding-left: @space;
+    }
+}
+
+.hcgov-primaryNav_link {
+    display: block;
+    padding: @space-kilo @space-deca; // Magic Numbers to match main site
+    text-align: center;
+
+    @media (min-width: @screen-lg-min) {
+        padding: @space-kilo;
+    }
+
+    &:link,
+    &:visited,
+    &:active {
+        color: @blue-900;
+        background-color: transparent;
+        transition: @transition;
+    }
+}
+
+.hcgov-primaryNav_link-learn {
+    .hcgov-primaryNav_link();
+
+    &:hover,
+    &:focus,
+    .active & {
+        color: @white;
+        background-color: @blue-500;
+    }
+}
+
+.hcgov-primaryNav_link-shop {
+    .hcgov-primaryNav_link();
+
+    &:hover,
+    &:focus,
+    .active & {
+        color: @white;
+        background-color: @blue-900;
+    }
+}

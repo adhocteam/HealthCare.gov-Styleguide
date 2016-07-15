@@ -1,0 +1,134 @@
+.hcgov-userNav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+
+.hcgov-userNav_item {
+    display: inline-block;
+    font-size: @font-size-deci;
+    font-weight: bold;
+    line-height: @line-height;
+}
+
+.hcgov-userNav_item + .hcgov-userNav_item {
+    padding-left: @space;
+    margin-left: @space;
+    border-left: 1px solid @black-500;
+
+    @media (min-width: @screen-sm-min) {
+        padding-left: @space-hecto;
+        margin-left: @space-hecto;
+    }
+}
+
+.hcgov-userNav_link {
+    padding: @space;
+    border: 0;
+    background-color: transparent;
+
+    &,
+    &:link,
+    &:visited,
+    &:active {
+        color: @blue-500;
+        border-radius: @border-radius;
+        transition: @transition;
+    }
+
+    &:hover,
+    &:focus {
+        color: @blue-900;
+        background-color: transparent;
+    }
+}
+
+.hcgov-userNav_link-user {
+    .hcgov-userNav_link();
+    text-align: right;
+}
+
+.hcgov-userNav_link-lang {
+    .hcgov-userNav_link();
+
+    &:link,
+    &:visited,
+    &:active {
+        padding-right: @space-deca;
+        padding-left: @space-deca;
+        background-color: @black-050;
+    }
+
+    &:hover,
+    &:focus {
+        color: @white;
+        background-color: @blue-500;
+    }
+}
+
+
+.hcgov-userNav_name {
+    display: none;
+    text-align: right;
+    vertical-align: bottom;
+
+    @media (min-width: @screen-lg-min) {
+        display: inline-block;
+        overflow: hidden;
+        max-width: 70%;
+        margin-right: @space;
+        margin-left: @space;
+    }
+}
+
+
+
+.hcgov-userNav_dropdown {
+    padding: 0;
+    border: 1px solid @black-300;
+    border-radius: 0;
+
+    @media (min-width: @screen-sm-min) {
+        position: absolute;
+        z-index: @zindex-dropdown;
+        top: 80%;
+        right: 0;
+        left: inherit;
+        width: 300px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+}
+
+
+.hcgov-userNav_dropdown:after,
+.hcgov-userNav_dropdown:before {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border: solid transparent;
+}
+
+.hcgov-userNav_dropdown:before {
+  @media (min-width: @screen-sm-min) {
+    right: 6em;
+    border-width: @space-hecto;
+    border-color: transparent;
+    border-bottom-color: @black-300;
+  }
+}
+
+.hcgov-userNav_dropdown:after {
+    @media (min-width: @screen-sm-min) {
+        right: 5.9em;
+        border-width: @space-hecto;
+        border-color: transparent;
+        border-bottom-color: @black-300;
+    }
+}

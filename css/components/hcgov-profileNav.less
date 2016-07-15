@@ -1,0 +1,67 @@
+.hcgov-profileNav {
+    padding: @space-hecto;
+    padding-bottom: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+.hcgov-profileNav_item {
+
+}
+
+.hcgov-profileNav_item + .hcgov-profileNav_item {
+    border-top: 1px solid @black-300;
+}
+
+.hcgov-profileNav_item-full {
+    .hcgov-profileNav_item();
+
+    padding-top: @space-hecto;
+    margin-right: -@space-hecto;
+    margin-left: -@space-hecto;
+}
+
+.hcgov-profileNav_item-full + .hcgov-profileNav_item-full {
+    padding-top: 0;
+}
+
+.hcgov-profileNav_link {
+    display: block;
+    padding: @space-hecto @space-hecto;
+    transition: @transition;
+
+    &:link,
+    &:visited,
+    &:active {
+        color: @blue-500;
+        background-color: transparent;
+    }
+
+    &:hover,
+    &:focus {
+        color: @blue-700;
+        background-color: @black-300;
+    }
+}
+
+.hcgov-profileNav_item-full .hcgov-profileNav_link {
+    padding-right: @space-kilo;
+    padding-left: @space-kilo;
+
+    &:link,
+    &:visited,
+    &:active {
+        background-color: @blue-100;
+    }
+
+    &:hover,
+    &:focus {
+        color: @blue-700;
+        background-color: @black-300;
+    }
+}
+
+
+.hcgov-profileNav_icon {
+    margin-right: @space-deca;
+}
